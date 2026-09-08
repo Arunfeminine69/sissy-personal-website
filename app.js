@@ -342,7 +342,45 @@ function render(items) {
   gallery.querySelectorAll('.view-btn').forEach(button => {
     addView(button.dataset.id, button);
   });
+/* Edit caption */
+gallery.querySelectorAll('.edit-btn').forEach(button => {
+  button.addEventListener('click', async () => {
+    const id = button.dataset.id;
 
+    const current = button.dataset.caption || '';
+
+    const caption = prompt(
+      'Edit your caption ✏️',
+      current
+    );
+
+    if (caption === null) return;
+
+    try {
+      const r = await fetch('/api/media/' + id, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          caption: caption.trim()
+        })
+      });
+
+      const data = await r.json();
+
+      if (!r.ok) {
+        alert(data.error || 'Edit failed.');
+        return;
+      }
+
+      loadGallery();
+
+    } catch {
+      alert('Could not edit this post.');
+    }
+  });
+});
   /* Delete */
   gallery.querySelectorAll('.media-delete').forEach(button => {
 
