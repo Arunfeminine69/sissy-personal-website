@@ -477,3 +477,58 @@ uploadForm?.addEventListener('submit', async e => {
 
 /* Start */
 loadGallery();
+/* =========================
+   VIP BOOKING PLAN
+========================= */
+
+let selectedVipPlan = null;
+
+const vipSelected = document.getElementById('vipSelected');
+const vipSubmit = document.getElementById('vipSubmit');
+
+document.querySelectorAll('.vip-book').forEach(button => {
+  button.addEventListener('click', () => {
+
+    selectedVipPlan = {
+      plan: button.dataset.plan,
+      price: button.dataset.price
+    };
+
+    if (vipSelected) {
+      vipSelected.textContent =
+        `💎 Selected: ${selectedVipPlan.plan} — ₹${selectedVipPlan.price}`;
+    }
+
+    document.getElementById('vip')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+
+vipSubmit?.addEventListener('click', () => {
+
+  if (!selectedVipPlan) {
+    alert('Please choose a VIP plan first 💎');
+    return;
+  }
+
+  const name = document.getElementById('vipName')?.value.trim();
+  const email = document.getElementById('vipEmail')?.value.trim();
+  const date = document.getElementById('vipDate')?.value;
+  const time = document.getElementById('vipTime')?.value;
+
+  if (!name || !email || !date || !time) {
+    alert('Please fill in your name, email, date and time.');
+    return;
+  }
+
+  alert(
+    `Booking request ready 💎\n\n` +
+    `Plan: ${selectedVipPlan.plan}\n` +
+    `Price: ₹${selectedVipPlan.price}\n` +
+    `Date: ${date}\n` +
+    `Time: ${time}\n\n` +
+    `Payment will be added in the next step.`
+  );
+});
