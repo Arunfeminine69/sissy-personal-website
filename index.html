@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website, interests, creative side and media gallery.">
+  <title>Sissy 🎀 — My Little World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#home">sissy<span>🎀</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#feminine">Feminine Side</a>
+      <a href="#media">Media</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO MY LITTLE CORNER OF THE INTERNET ✨</p>
+        <h1>Engineer brain.<br><em>Soft-girl soul.</em></h1>
+        <p class="lead">A personal space for my engineering journey, bikes, creativity, cute aesthetics, self-expression and the random little things that make me… me.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#about">Get to know me</a>
+          <a class="btn ghost" href="#media">Open gallery →</a>
+        </div>
+        <div class="chips"><span>🤖 Robotics & Automation</span><span>🏍️ Bikes</span><span>🎀 Feminine expression</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="photo-wrap">
+          <img src="assets/profile.jpg" alt="Profile photo">
+          <span class="online">● ONLINE</span>
+        </div>
+        <div class="mini-profile">
+          <div><strong>Sissy 🎀</strong><span>Personal space</span></div>
+          <span class="sparkle">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section shell">
+      <div class="section-heading"><span>01</span><div><p class="eyebrow">ABOUT ME</p><h2>A little bit of everything.</h2></div></div>
+      <div class="about-grid">
+        <article class="glass intro-card"><h3>Who I am</h3><p>I'm a college engineering student in Coimbatore studying <strong>Robotics & Automation</strong>. I enjoy learning practical things, exploring technology, talking about bikes, and figuring out what kind of person I want to become.</p><p>There is also a softer, more playful side of me that I like expressing through cute aesthetics, accessories and personal style. This site gives both sides room to exist together.</p></article>
+        <div class="facts">
+          <div class="fact"><span>🎓</span><div><b>Study</b><small>Engineering · Robotics & Automation</small></div></div>
+          <div class="fact"><span>📍</span><div><b>Based in</b><small>Coimbatore, India</small></div></div>
+          <div class="fact"><span>🏍️</span><div><b>Current obsession</b><small>Bikes, riding & the MT-15 dream</small></div></div>
+          <div class="fact"><span>🎀</span><div><b>Creative side</b><small>Cute, playful & feminine aesthetics</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section shell alt">
+      <div class="section-heading"><span>02</span><div><p class="eyebrow">MY JOURNEY</p><h2>The topics that make up my world.</h2></div></div>
+      <div class="topic-grid">
+        <article class="topic"><div class="icon">🤖</div><h3>Engineering</h3><p>Robotics, automation, electronics, college work and learning by actually doing.</p></article>
+        <article class="topic"><div class="icon">🏍️</div><h3>Bikes</h3><p>Dream bikes, riding skills, helmets, buying decisions and the road ahead.</p></article>
+        <article class="topic"><div class="icon">💗</div><h3>My feminine side</h3><p>A personal exploration of cute aesthetics, softness, expression and what feels authentically me.</p></article>
+        <article class="topic"><div class="icon">💼</div><h3>Work & money</h3><p>Part-time work, salary calculations, practical budgeting and planning bigger purchases.</p></article>
+        <article class="topic"><div class="icon">🌱</div><h3>Growing up</h3><p>Learning independence, confidence, responsibility and how to make my own decisions.</p></article>
+        <article class="topic"><div class="icon">🪄</div><h3>Future me</h3><p>Projects, new skills, better habits and building a life that feels genuinely mine.</p></article>
+      </div>
+    </section>
+
+    <section id="feminine" class="section shell">
+      <div class="section-heading"><span>03</span><div><p class="eyebrow">MY FEMININE SIDE</p><h2>Softness is a side of me, not a box.</h2></div></div>
+      <div class="fem-grid">
+        <article class="glass quote-card"><div class="big-bow">🎀</div><p>“I can love engineering and motorcycles and still love bows, cute things and feminine expression. I don't have to choose one version of myself.”</p><small>— my space, my rules</small></article>
+        <div class="fem-list">
+          <div><b>🎀 Cute aesthetics</b><span>Bows, accessories, playful details and things that simply make me smile.</span></div>
+          <div><b>🌸 Self-expression</b><span>Exploring how I want to look, feel and present myself in different situations.</span></div>
+          <div><b>🪞 Self-discovery</b><span>Separating personal style from bigger questions about identity, one step at a time.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="section shell alt">
+      <div class="section-heading"><span>04</span><div><p class="eyebrow">PUBLIC MEDIA</p><h2>My photos & videos.</h2></div></div>
+      <div class="upload glass">
+        <div><h3>Share something new ✨</h3><p>Upload a photo or video to the public gallery. Anyone who can access this website can see public media, so only upload things you're comfortable sharing.</p></div>
+        <form id="uploadForm">
+          <label class="file-box"><input id="fileInput" type="file" name="file" accept="image/*,video/*" required><span>📸 Choose photo / video</span><small>JPG · PNG · WEBP · MP4 · WEBM · up to 250 MB</small></label>
+          <input class="text-input" id="caption" name="caption" maxlength="180" placeholder="Caption (optional)">
+          <button class="btn primary" type="submit">Upload to gallery ↑</button>
+        </form>
+        <div id="uploadStatus" class="status" aria-live="polite"></div>
+      </div>
+      <div id="gallery" class="gallery"><div class="loading">Loading gallery…</div></div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><div><strong>sissy🎀</strong><span>Built as a personal corner of the web.</span></div><span>© <span id="year"></span> · Made with curiosity ✦</span></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
