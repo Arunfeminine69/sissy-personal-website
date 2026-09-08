@@ -221,6 +221,22 @@ app.post('/api/media/:id/comment', (req, res) => {
 });
 
 /* Delete media */
+/* Edit caption */
+app.put('/api/media/:id', (req, res) => {
+  const data = loadData();
+
+  const item = data.media.find(x => x.id === req.params.id);
+
+  if (!item) {
+    return res.status(404).json({ error: 'Post not found' });
+  }
+
+  item.caption = String(req.body.caption || '').trim().slice(0, 180);
+
+  saveData(data);
+
+  res.json(item);
+});
 app.delete('/api/media/:id', (req, res) => {
   const data = loadData();
 
